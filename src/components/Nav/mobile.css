@@ -1,0 +1,26 @@
+@media (max-width: 660px) {
+  .logo img {
+    display: none;
+  }
+  .active {
+    display: none;
+  }
+  .searchBox {
+    display: none;
+  }
+
+  .navMenuBtn {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+  }
+
+  .navMenuBtn i {
+    font-size: 25px;
+  }
+  .siderBar {
+    display: block;
+  }
+}

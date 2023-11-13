@@ -1,0 +1,21 @@
+:root {
+  --card-radius: 20px;
+}
+
+.card {
+  background: #29323c;
+  border-radius: var(--card-radius);
+  animation: card-show .5s ease-out;
+  box-shadow: rgb(10, 10, 10) 2px 2px 5px;
+}
+
+@keyframes card-show {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,143 @@
+* {
+  color: #efeff0;
+}
+
+nav {
+  background: #29323c;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  justify-content: center;
+  z-index: 9999;
+  box-shadow: rgb(10, 10, 10) 0px 2px 5px;
+}
+
+.navMenuBtn {
+  display: none;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  height: inherit;
+  width: 1300px;
+  justify-content: center;
+}
+
+.logo {
+  height: inherit;
+  white-space: pre;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+
+.logo a {
+  display: flex;
+  height: 100%;
+  text-decoration: none;
+  align-items: center;
+}
+
+.logo a:hover span {
+  color: #cdd1e4;
+}
+
+.logo img {
+  height: 40px;
+  position: relative;
+  margin-right: 1.5em;
+  white-space: pre;
+  border-radius: 50%;
+}
+
+.logo span {
+  white-space: pre;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-weight: 300;
+}
+
+.active {
+  display: flex;
+  height: inherit;
+  list-style: none;
+  flex-grow: 1;
+}
+
+.active li {
+  margin-left: 2em;
+}
+
+.active a {
+  display: flex;
+  height: 100%;
+  text-decoration: none;
+  align-items: center;
+}
+
+.active i {
+  margin-right: 0.5em;
+}
+
+.active span,
+.active i {
+  white-space: pre;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: clamp(1rem, 2vw, 1.025rem);
+  font-weight: 550;
+}
+
+.active a:hover span,
+.active a:hover i {
+  color: #cdd1e4;
+}
+
+.searchBox {
+  display: flex;
+  height: 75%;
+  align-items: center;
+  border-radius: 10px;
+  transition: ease-in-out 0.5s;
+}
+
+.searchBoxIsOpened {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.searchBoxIsClosed {
+  background: transparent;
+}
+
+.searchBox i {
+  font-size: 30px;
+  margin-left: 5px;
+  margin-right: 0.5em;
+}
+
+.searchBoxIsOpened input {
+  background: transparent;
+  width: 180px;
+  height: 100%;
+  border: none;
+  font-size: 18px;
+  transition: ease-in-out 0.5s;
+  color: #000;
+}
+
+.searchBoxIsClosed input {
+  background: transparent;
+  width: 0;
+  border: none;
+  transition: ease-in-out 0.5s;
+}
+
+input:focus {
+  outline: none;
+}
+
+.siderBar {
+  display: none;
+}

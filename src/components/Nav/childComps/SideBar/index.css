@@ -1,0 +1,122 @@
+.sideBarBox {
+  display: block;
+  position: fixed;
+  width: 60vw;
+  min-width: 70px;
+  height: 100%;
+  background: #29323c;
+  transition: ease 0.5s;
+  white-space: pre;
+  overflow: hidden;
+  overflow-y: auto;
+  top: 0;
+  z-index: 9999;
+}
+
+.sideBarBox::-webkit-scrollbar {
+  width: 0px;
+}
+
+.sideBarBoxIsClosed {
+  left: -60vw;
+  /* left: 0; */
+}
+
+.sideBarBoxIsOpened {
+  left: 0;
+  z-index: 1000;
+  box-shadow: rgb(10, 10, 10) 2px 0px 5px;
+}
+
+.asideUser {
+  margin-top: 80px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 60px;
+}
+
+.userHead {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+.userHead img {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  box-shadow: rgb(10, 10, 10) 0 0 5px;
+}
+
+.introduction {
+  width: 60%;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.introduction .title {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.introduction .myIntroduction {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.siderMenuCard {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.siderTitle {
+  position: relative;
+  font-size: 13px;
+  left: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
+}
+
+.siderMenuCard hr {
+  margin-top: 7px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 1px;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.siderNav {
+  margin-top: 10px;
+  list-style: none;
+  width: 100%;
+}
+
+.siderNav li {
+  height: 36px;
+  line-height: 36px;
+}
+
+.siderNav i {
+  margin-right: 0.5em;
+}
+
+.siderNav a {
+  padding-left: 2em;
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: none;
+  display: block;
+}
+
+.siderNav li:hover {
+  background: rgb(34, 42, 45);
+}
+
+.active {
+  background: rgb(34, 42, 45);
+}
