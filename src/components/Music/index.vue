@@ -40,8 +40,7 @@
       <p v-for="(item, index) in lyrics" :key="item" class="otherSentence">
         <span
           :class="{ curSentence: index == lrcIndex }"
-          @click="console.log(index, lrcIndex)"
-          >{{ item.text }}</span
+          @click="console.log(index, lrcIndex)">{{ item.text }}</span>
         >
       </p>
     </div>
@@ -220,7 +219,7 @@ async function onloadAudio(name) {
   await onloadLrc(name);
 }
 
-let lyrics = ref([]);
+let lyrics = ref([]);  // 歌词数组
 function parseLRC(lrcText) {
   const lines = lrcText.split("\n");
   lines.forEach((line) => {
