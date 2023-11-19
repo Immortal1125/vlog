@@ -100,6 +100,11 @@
   font-size: 40px !important;
 }
 
+.iconLrc {
+  font-size: 35px !important;
+  color: rgba(255, 255, 255, 0.4);
+}
+
 .progressBar {
   position: absolute;
   background: #3498db;
@@ -112,4 +117,8 @@
 
 .progress {
   background: #7b508c;
+}
+
+.lrcIsOpened {
+  color: rgba(255, 255, 255, 0.95);
 }

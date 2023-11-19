@@ -21,13 +21,13 @@
             @click="changePlayStatus"
           ></i>
           <i class="iconfont icon-xiayishou icon" @click="nextMusic"></i>
+          <i
+            class="iconfont icon-geci1 iconLrc"
+            :class="{ lrcIsOpened: lrcIsOpen }"
+            @click="changeLrcStatus"
+          ></i>
         </div>
         <div class="progressBar"></div>
-        <!-- <div
-          class="progressBar progress"
-          style="color: black"
-          :style="{ width: onloadMusicPercent }"
-        ></div> -->
         <div
           class="progressBar progress"
           :style="{ width: (audioCurTime / audio.duration) * 100 + '%' }"
@@ -35,12 +35,13 @@
       </div>
     </div>
   </div>
-  <div class="lrc">
+  <div class="lrc" v-if="lrcIsOpen">
     <div id="lrc">
       <p v-for="(item, index) in lyrics" :key="item" class="otherSentence">
         <span
           :class="{ curSentence: index == lrcIndex }"
-          @click="console.log(index, lrcIndex)">{{ item.text }}</span>
+          @click="console.log(index, lrcIndex)"
+          >{{ item.text }}</span
         >
       </p>
     </div>
@@ -219,7 +220,7 @@ async function onloadAudio(name) {
   await onloadLrc(name);
 }
 
-let lyrics = ref([]);  // 歌词数组
+let lyrics = ref([]); // 歌词数组
 function parseLRC(lrcText) {
   const lines = lrcText.split("\n");
   lines.forEach((line) => {
@@ -252,6 +253,12 @@ function timeToSec(time) {
   } else {
     console.log("无效的时间标记格式");
   }
+}
+
+// 修改歌词显示状态
+let lrcIsOpen = ref(false);
+function changeLrcStatus() {
+  lrcIsOpen.value = !lrcIsOpen.value;
 }
 
 /**

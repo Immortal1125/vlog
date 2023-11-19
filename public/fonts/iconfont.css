@@ -1,6 +1,6 @@
 @font-face {
   font-family: "iconfont"; /* Project id 4169274 */
-  src: url('iconfont.woff2?t=1696572135170') format('woff2');
+  src: url("iconfont.woff2?t=1700366547180") format("woff2");
 }
 
 .iconfont {
@@ -9,6 +9,14 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-geci1:before {
+  content: "\e600";
+}
+
+.icon-sanmingzhi-01:before {
+  content: "\e605";
 }
 
 .icon-jiazaizhong:before {
@@ -74,4 +82,3 @@
 .icon-qiandao:before {
   content: "\e69c";
 }
-
