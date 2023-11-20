@@ -5,3 +5,12 @@
 .leftBar-part1 span {
   display: block;
 }
+
+.leftBar-part1 span:nth-child(1) {
+  font-size: 20px;
+  color: white;
+}
+
+.leftBar-part1 span:nth-child(2) {
+  color: white;
+}

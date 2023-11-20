@@ -1,5 +1,12 @@
 <template>
-  <div style="width: calc(100% - 280px); float: right">
-    <div style="width: 80%; background-color: red">123</div>
+  <div
+    style="
+      width: 80%;
+      background-color: pink;
+      margin-left: auto;
+      margin-right: auto;
+    "
+  >
+    123
   </div>
 </template>
