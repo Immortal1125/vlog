@@ -21,12 +21,20 @@
             @click="changePlayStatus"
           ></i>
           <i class="iconfont icon-xiayishou icon" @click="nextMusic"></i>
+        </div>
+        <div
+          class="lrcButtonBox"
+          style="
+            
+          "
+        >
           <i
             class="iconfont icon-geci1 iconLrc"
             :class="{ lrcIsOpened: lrcIsOpen }"
             @click="changeLrcStatus"
           ></i>
         </div>
+
         <div class="progressBar"></div>
         <div
           class="progressBar progress"

@@ -41,7 +41,22 @@
     <div class="siderMenuCard">
       <span class="siderTitle">音乐</span>
       <hr />
-      <div style="width: 100%; height: 400px"><MusicCard></MusicCard></div>
+      <div style="width: 100%; height: 200px">
+        <MusicCard></MusicCard>
+      </div>
+    </div>
+    <div class="displayMode">
+      <span>日间</span>
+      <label for="modeButton">
+        <input
+          @click="console.log(1)"
+          type="checkbox"
+          name="modeButton"
+          id="modeButton"
+        />
+        <div></div>
+      </label>
+      <span>夜间</span>
     </div>
   </div>
 </template>
