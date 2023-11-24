@@ -3,10 +3,10 @@
 }
 
 .card {
-  background: #29323c;
+  background: var(--nav-background-color);
   border-radius: var(--card-radius);
-  animation: card-show .5s ease-out;
-  box-shadow: rgb(10, 10, 10) 2px 2px 5px;
+  animation: card-show 0.5s ease-out;
+  box-shadow: var(--box-shadow-color) 2px 2px 5px;
 }
 
 @keyframes card-show {

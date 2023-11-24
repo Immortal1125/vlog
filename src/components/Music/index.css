@@ -22,7 +22,7 @@
   text-align: center;
   font-size: clamp(1.125rem, 2vw, 1.5rem);
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.95);
+  color: var(--nav-font-color);
   overflow: hidden;
 
   text-overflow: ellipsis;
@@ -32,7 +32,7 @@
   padding-top: 10px;
   display: block;
   text-align: center;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--nav-thin-font-color);
 }
 
 .lrc {
@@ -52,7 +52,7 @@
   text-overflow: ellipsis;
   line-height: 24px;
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--nav-thin-font-color);
 }
 
 #lrc {
@@ -102,7 +102,7 @@
 
 .iconLrc {
   font-size: 35px !important;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--nav-thin-font-color);
 }
 
 .progressBar {
@@ -120,7 +120,7 @@
 }
 
 .lrcIsOpened {
-  color: rgba(255, 255, 255, 0.95);
+  color: var(--nav--font-color);
 }
 
 .lrcButtonBox {

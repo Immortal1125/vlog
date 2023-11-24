@@ -49,10 +49,11 @@
       <span>日间</span>
       <label for="modeButton">
         <input
-          @click="console.log(1)"
+          @click="changeMode"
           type="checkbox"
           name="modeButton"
           id="modeButton"
+          :checked="dOrNMode"
         />
         <div></div>
       </label>
@@ -63,7 +64,7 @@
 
 <script setup>
 import { RouterLink, useRoute } from "vue-router";
-import { inject } from "vue";
+import { inject, ref } from "vue";
 import MusicCard from "../../../Music/index.vue";
 const props = defineProps(["navBtnList"]);
 
@@ -85,6 +86,42 @@ const route = useRoute();
  */
 function isCurrentPage(url) {
   return route.path === url;
+}
+
+let dOrNMode = ref(true);
+const root = document.documentElement;
+const modeButton = document.getElementById("modeButton");
+function nowModeSetting() {
+  const currentDate = new Date();
+  const currentHour = currentDate.getHours();
+  if (currentHour <= 8 || currentHour >= 18) {
+    dOrNMode.value = false;
+    changeMode();
+  }
+}
+
+nowModeSetting();
+function changeMode() {
+  if (!dOrNMode.value) {
+    dOrNMode.value = true;
+    root.style.setProperty(
+      "--background-color",
+      "linear-gradient(to top, #bdc3c7, #2c3e50)"
+    );
+    root.style.setProperty("--nav-background-color", "#29323c");
+    root.style.setProperty("--nav-font-color", "#efeff0");
+    root.style.setProperty("--box-shadow-color", "rgba(64, 64, 64, 0.6)");
+    root.style.setProperty("--nav-list-hover-color", "rgb(34, 42, 45)");
+    root.style.setProperty("--nav-thin-font-color", "rgba(255,255,255,0.5)");
+  } else {
+    dOrNMode.value = false;
+    root.style.setProperty("--background-color", "#f0f3f4");
+    root.style.setProperty("--nav-background-color", "#edf1f2");
+    root.style.setProperty("--nav-font-color", "#333333");
+    root.style.setProperty("--box-shadow-color", "rgba(64, 64, 64, 0.6)");
+    root.style.setProperty("--nav-list-hover-color", "#e5e5e5");
+    root.style.setProperty("--nav-thin-font-color", "rgba(0,0,0,0.3)");
+  }
 }
 </script>
 

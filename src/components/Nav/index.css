@@ -1,9 +1,5 @@
-* {
-  color: #efeff0;
-}
-
 nav {
-  background: #29323c;
+  background: var(--nav-background-color);
   width: 100%;
   height: 60px;
   display: flex;
@@ -54,6 +50,7 @@ nav {
 }
 
 .logo span {
+  color: var(--nav-font-color);
   white-space: pre;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: clamp(1rem, 2vw, 1.125rem);
@@ -76,6 +73,7 @@ nav {
   height: 100%;
   text-decoration: none;
   align-items: center;
+  color: var(--nav-font-color);
 }
 
 .active i {
@@ -115,6 +113,7 @@ nav {
   font-size: 30px;
   margin-left: 5px;
   margin-right: 0.5em;
+  color: var(--nav-font-color);
 }
 
 .searchBoxIsOpened input {
