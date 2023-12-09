@@ -22,19 +22,13 @@
           ></i>
           <i class="iconfont icon-xiayishou icon" @click="nextMusic"></i>
         </div>
-        <div
-          class="lrcButtonBox"
-          style="
-            
-          "
-        >
+        <div class="lrcButtonBox">
           <i
             class="iconfont icon-geci1 iconLrc"
             :class="{ lrcIsOpened: lrcIsOpen }"
             @click="changeLrcStatus"
           ></i>
         </div>
-
         <div class="progressBar"></div>
         <div
           class="progressBar progress"
@@ -155,7 +149,9 @@ async function nextMusic() {
   }
   musicIndex++;
   const lrcBox = document.getElementById("lrc");
-  lrcBox.style.transform = "transformY(0)";
+  if (lrcBox) {
+    lrcBox.style.transform = "transformY(0)";
+  }
   if (musicIndex == musicList.length) {
     musicIndex = 0;
   }
@@ -168,6 +164,10 @@ async function prevMusic() {
     changePlayStatus();
   }
   musicIndex--;
+  const lrcBox = document.getElementById("lrc");
+  if (lrcBox) {
+    lrcBox.style.transform = "transformY(0)";
+  }
   if (musicIndex == -1) {
     musicIndex = musicList.length - 1;
   }
@@ -189,7 +189,7 @@ audio.addEventListener("timeupdate", () => {
       return item.timestamp == audioCurTime.value;
     });
   }
-  if (lrcIndex.value != -1) {
+  if (lrcIndex.value != -1 && lrcBox) {
     lrcBox.style.transform = "translateY(" + -24 * lrcIndex.value + "px)";
   }
 });

@@ -26,14 +26,18 @@
         class="searchBox"
         @click="openSearchBox"
       >
-        <i class="iconfont icon-sousuo"></i>
-        <input
-          type="text"
-          placeholder="搜索什么...."
-          :value="searchValue"
-          @blur="closeSearchBox"
-          id="input"
-        />
+        <li>
+          <form @submit="getSearch">
+            <i class="iconfont icon-sousuo"></i>
+            <input
+              type="text"
+              placeholder="搜索什么...."
+              v-model="searchValue"
+              @blur="closeSearchBox"
+              id="input"
+            />
+          </form>
+        </li>
       </ul>
     </div>
   </nav>
@@ -107,6 +111,11 @@ function clickCloseSiderBox(event) {
 
 function closeSiderBox() {
   barIsOpened.value = false;
+}
+
+function getSearch(e) {
+  e.preventDefault();
+  console.log(searchValue.value);
 }
 </script>
 

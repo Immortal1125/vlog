@@ -101,6 +101,15 @@ nav {
   transition: ease-in-out 0.5s;
 }
 
+.searchBox li {
+  list-style: none;
+}
+
+.searchBox li form {
+  display: flex;
+  align-items: center;
+}
+
 .searchBoxIsOpened {
   background: rgba(255, 255, 255, 0.6);
 }
@@ -126,7 +135,7 @@ nav {
   color: #000;
 }
 
-.searchBoxIsClosed input {
+.searchBoxIsClosed #input {
   background: transparent;
   width: 0;
   border: none;
