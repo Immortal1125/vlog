@@ -1,12 +1,40 @@
 <template>
   <div class="leftBar-part1 card">
-    <span>站点概览 </span>
-    <span>运行时间 {{ untilTime }}</span>
+    <div class="leftBar-part1-inner">
+      <div class="mainList">
+        <div>
+          <span
+            class="tab-tools-btn"
+            :class="{ active: tabTools == 1 }"
+            @click="tabTools = 1"
+            >站点概览</span
+          >
+        </div>
+        <div>
+          <span
+            class="tab-tools-btn"
+            :class="{ active: tabTools == 2 }"
+            @click="tabTools = 2"
+            >功能</span
+          >
+        </div>
+      </div>
+      <div id="inner-part1" v-if="tabTools == 1">
+        <div class="author-card">
+          <img src="/images/logo.png" alt="0" class="author-image" />
+          <span class="title">Immort</span>
+          <span class="subtitle">欢迎来看</span>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
+
+let tabTools = ref(1);
+
 /**
  * 运行时间
  */

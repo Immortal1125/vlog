@@ -6,7 +6,7 @@
     <div class="content">
       <div class="logo">
         <RouterLink to="/">
-          <img src="/images/logo.png" alt="1" />
+          <!-- <img src="/images/logo.png" alt="1" /> -->
           <span>Immort</span>
         </RouterLink>
       </div>

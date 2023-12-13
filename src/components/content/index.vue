@@ -1,7 +1,6 @@
 <template>
   <div class="content">
     <div class="aside">
-      <Aside style="margin-bottom: 20px"></Aside>
       <Aside></Aside>
     </div>
     <div class="main">

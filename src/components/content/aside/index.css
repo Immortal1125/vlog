@@ -1,16 +1,67 @@
 .leftBar-part1 {
+  width: 240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 14px;
   text-align: center;
+  margin-bottom: 10px;
 }
 
-.leftBar-part1 span {
+.leftBar-part1-inner {
+  max-height: calc(100vh - 110px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.mainList {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.mainList div {
+  width: 50%;
+  height: 30px;
+  line-height: 20px;
+}
+
+.tab-tools-btn {
+  line-height: 30px;
+  font-size: 13px;
+  padding-bottom: 5px;
+  color: var(--nav-font-color);
+  cursor: pointer;
+}
+
+.tab-tools-btn:hover {
+  color: var(--nav-thin-font-color);
+}
+
+.active {
+  border-bottom: 1px solid var(--nav-font-color);
+}
+
+.title {
   display: block;
-}
-
-.leftBar-part1 span:nth-child(1) {
   font-size: 20px;
-  color: white;
+  color: var(--nav-font-color);
 }
 
-.leftBar-part1 span:nth-child(2) {
-  color: white;
+.subtitle {
+  display: block;
+  font-size: 12px;
+  color: var(--nav-thin-font-color);
+}
+
+.author-image {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.author-card {
+  /* display: block; */
 }
