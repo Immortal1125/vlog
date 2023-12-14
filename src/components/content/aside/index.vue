@@ -25,6 +25,20 @@
           <span class="title">Immort</span>
           <span class="subtitle">欢迎来看</span>
         </div>
+        <div class="site-state">
+          <div class="site-state-item">
+            <span class="site-state-item-count">0</span>
+            <span class="site-state-item-name">文章</span>
+          </div>
+          <div class="site-state-item">
+            <span class="site-state-item-count">0</span>
+            <span class="site-state-item-name">分类</span>
+          </div>
+          <div class="site-state-item">
+            <span class="site-state-item-count">0</span>
+            <span class="site-state-item-name">标签</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
