@@ -23,6 +23,7 @@
         <div class="author-card">
           <img src="/images/logo.png" alt="0" class="author-image" />
           <span class="title">Immort</span>
+          
           <span class="subtitle">欢迎来看</span>
         </div>
         <div class="site-state">
