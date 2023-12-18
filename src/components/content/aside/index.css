@@ -8,6 +8,7 @@
 }
 
 .leftBar-part1-inner {
+  position: relative;
   max-height: calc(100vh - 110px);
   overflow-y: auto;
   overflow-x: hidden;
@@ -35,7 +36,7 @@
   cursor: pointer;
 }
 
-.tab-tools-btn:hover {
+.tab-tools-btn:hover:not(.active) {
   color: var(--nav-thin-font-color);
 }
 
@@ -67,6 +68,12 @@
   display: flex;
   justify-content: center;
   text-align: center;
+  margin-bottom: 10px;
+}
+
+#inner-part1,
+#inner-part2 {
+  padding: 10px;
 }
 
 .site-state-item:first-child {
@@ -89,4 +96,94 @@
 .site-state-item-name {
   font-size: 13px;
   color: var(--nav-thin-font-color);
+}
+
+.site-author-link {
+  display: flex;
+}
+
+.font-weight-bold {
+  font-weight: 600 !important;
+  font-family: "Comfortaa", "Open Sans", -apple-system, system-ui,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
+}
+
+.leftBar-part1 h6 {
+  position: relative;
+  font-size: 17px;
+  color: var(--nav-font-color);
+  text-align: start;
+  margin-bottom: 0.5rem;
+}
+
+.leftBar-part1 h6::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: rgba(142, 140, 216, 1);
+  width: 30px;
+  height: 9px;
+  left: 0;
+  bottom: -20%;
+  border-radius: 10px;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.progress-info {
+  display: flex;
+  margin-bottom: 0.5rem;
+  align-items: center;
+  /* justify-content: space-between; */
+  height: 20px;
+  overflow: hidden;
+}
+
+.progress-label {
+  background-color: rgba(142, 140, 216, 0.5);
+  padding: 2px 10px;
+  border-radius: 10px;
+}
+
+#yearprogress_yearname {
+  display: block;
+  font-size: 12px;
+  color: var(--nav-font-color);
+}
+
+.progress-percentage {
+  width: 100%;
+  text-align: end;
+  height: 20px;
+  transition: 0.3s linear;
+}
+
+.progress-percentage:hover {
+  transform: translateY(-20px);
+}
+
+.progress-percentage span {
+  color: var(--nav-thin-font-color);
+  font-size: 14px;
+  display: block;
+  line-height: 20px;
+  text-align: end;
+}
+
+.progress {
+  overflow: hidden;
+  height: 8px;
+  margin-bottom: 1rem;
+  border-radius: 0.2rem;
+  background-color: #e8e8f7;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+
+.progress-bar {
+  height: auto;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: #5e72e4 !important;
 }
