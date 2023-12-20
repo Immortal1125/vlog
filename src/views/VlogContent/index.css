@@ -1,0 +1,24 @@
+.vlog-content {
+  color: var(--nav-font-color);
+  line-height: 1.5;
+  padding: 20px 20px 60px 20px;
+}
+
+.title {
+  display: block;
+  font-weight: bold;
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  text-align: center;
+}
+
+.subtitle {
+  display: flex;
+  color: var(--nav-thin-font-color);
+  font-size: clamp(0.825rem, 1vw, 0.875rem);
+  justify-content: center;
+  align-items: center;
+}
+
+.subtitle .icon {
+  margin-right: 5px;
+}

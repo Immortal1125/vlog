@@ -2,10 +2,8 @@
   max-width: 1200px; /* 内容区域的最大宽度为1400px */
   margin-left: auto;
   margin-right: auto; /* 将内容向左对齐，保持在页面中间 */
-  margin-top: 100px; /* 将内容向上移动100px */
-  /* background: pink; */
+  padding-top: 100px; /* 将内容向上移动100px */
   width: 90%;
-  height: 200px;
   display: flex;
 }
 

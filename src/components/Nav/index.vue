@@ -86,6 +86,7 @@ function closeSearchBox() {
 
 let barIsOpened = ref(false);
 provide("barIsOpened", barIsOpened);
+let clickCloseSiderBoxListener;
 function openSiderBox() {
   barIsOpened.value = true;
   document.addEventListener("click", clickCloseSiderBox);
@@ -99,13 +100,18 @@ function clickCloseSiderBox(event) {
   const sideBar = document.getElementById("siderBar");
   const navMenuBtn = document.getElementById("navMenuBtn");
   const navMenuIcon = document.getElementById("navMenuIcon");
-  if (
-    !sideBar.contains(event.target) &&
-    event.target !== navMenuBtn &&
-    event.target !== navMenuIcon
-  ) {
-    closeSiderBox();
-    removeEventListener("click", clickCloseSiderBox);
+  if (sideBar) {
+    console.log(event.target);
+    if (
+      !sideBar.contains(event.target) &&
+      event.target !== navMenuBtn &&
+      event.target !== navMenuIcon
+    ) {
+      closeSiderBox();
+      document.removeEventListener("click", clickCloseSiderBox);
+    }
+  } else {
+    document.removeEventListener("click", clickCloseSiderBox);
   }
 }
 

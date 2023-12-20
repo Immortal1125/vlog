@@ -3,9 +3,13 @@ import vue from "@vitejs/plugin-vue";
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
+import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  alias: {
+    "@": path.resolve(__dirname, "./src"),
+  },
   plugins: [
     vue(),
     AutoImport({
@@ -29,7 +33,7 @@ export default defineConfig({
   },
   server: {
     host: "0.0.0.0",
-    post: "5173",
+    port: "5173",
     proxy: {
       "/public/api": "http://localhost:8080",
     },
