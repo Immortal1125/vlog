@@ -56,16 +56,17 @@ const router = createRouter({
   ],
 });
 
-// router.beforeEach(async (to, from) => {
-//   if (
-//     // 检查用户是否已登录
-//     !isAuthenticated &&
-//     // ❗️ 避免无限重定向
-//     to.name !== "Login"
-//   ) {
-//     // 将用户重定向到登录页面
-//     return { name: "Login" };
-//   }
-// });
+router.beforeEach(async (to, from, next) => {
+  if (to.path === "/administrator") {
+    let token = localStorage.getItem("token");
+    if (token === null || token === "") {
+      next("/login");
+    } else {
+      next();
+    }
+  } else {
+    next();
+  }
+});
 
 export default router;
