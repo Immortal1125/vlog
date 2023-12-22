@@ -1,7 +1,7 @@
 <template>
-  <Nav></Nav>
-  <Content></Content>
-  <AdminBtn class="adminBtn"></AdminBtn>
+    <Nav></Nav>
+    <Content></Content>
+    <AdminBtn class="adminBtn"></AdminBtn>
 </template>
 
 <script setup>
@@ -12,14 +12,14 @@ import AdminBtn from "../../components/AdminBtn/index.vue";
 
 <style scoped>
 .adminBtn {
-  position: fixed;
-  bottom: 50px;
-  left: 50px;
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
 }
 
 @media (max-width: 660px) {
-  .adminBtn {
-    display: none;
-  }
+    .adminBtn {
+        display: none;
+    }
 }
 </style>

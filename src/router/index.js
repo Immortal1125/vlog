@@ -9,64 +9,64 @@ import Administrator from "../views/administrator/index.vue";
 import Login from "../views/login/index.vue";
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: "/",
-      name: "index",
-      component: Index,
-      children: [
+    history: createWebHistory(import.meta.env.BASE_URL),
+    routes: [
         {
-          path: "/home",
-          name: "home",
-          component: Home,
+            path: "/",
+            name: "index",
+            component: Index,
+            children: [
+                {
+                    path: "/home",
+                    name: "home",
+                    component: Home,
+                },
+                {
+                    path: "/link",
+                    name: "link",
+                    component: Link,
+                },
+                {
+                    path: "/category",
+                    name: "category",
+                    component: Category,
+                },
+                {
+                    path: "/archive",
+                    name: "archive",
+                    component: Archive,
+                },
+                {
+                    path: "/vlog",
+                    name: "vlog",
+                    component: Vlog,
+                },
+            ],
         },
         {
-          path: "/link",
-          name: "link",
-          component: Link,
+            path: "/administrator",
+            name: "administrator",
+            component: Administrator,
         },
         {
-          path: "/category",
-          name: "category",
-          component: Category,
+            path: "/login",
+            name: "login",
+            component: Login,
         },
-        {
-          path: "/archive",
-          name: "archive",
-          component: Archive,
-        },
-        {
-          path: "/vlog",
-          name: "vlog",
-          component: Vlog,
-        },
-      ],
-    },
-    {
-      path: "/administrator",
-      name: "administrator",
-      component: Administrator,
-    },
-    {
-      path: "/login",
-      name: "login",
-      component: Login,
-    },
-  ],
+    ],
 });
 
 router.beforeEach(async (to, from, next) => {
-  if (to.path === "/administrator") {
-    let token = localStorage.getItem("token");
-    if (token === null || token === "") {
-      next("/login");
+    if (to.path === "/administrator") {
+        let token = localStorage.getItem("token");
+        if (token === null || token === "") {
+            next("/login");
+        } else {
+            next();
+        }
     } else {
-      next();
+        next();
     }
-  } else {
-    next();
-  }
 });
 
 export default router;

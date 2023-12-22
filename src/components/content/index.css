@@ -1,18 +1,18 @@
 .content {
-  max-width: 1200px; /* 内容区域的最大宽度为1400px */
-  margin-left: auto;
-  margin-right: auto; /* 将内容向左对齐，保持在页面中间 */
-  padding-top: 100px; /* 将内容向上移动100px */
-  width: 90%;
-  display: flex;
+    max-width: 1200px; /* 内容区域的最大宽度为1400px */
+    margin-left: auto;
+    margin-right: auto; /* 将内容向左对齐，保持在页面中间 */
+    padding-top: 100px; /* 将内容向上移动100px */
+    width: 90%;
+    display: flex;
 }
 
 .aside {
-  width: 280px;
-  float: left;
+    width: 280px;
+    float: left;
 }
 
 .main {
-  width: calc(100% - 280px);
-  float: right;
+    width: calc(100% - 280px);
+    float: right;
 }

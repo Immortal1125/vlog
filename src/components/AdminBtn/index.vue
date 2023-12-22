@@ -1,9 +1,9 @@
 <template>
-  <div class="card admin-btn">
-    <RouterLink to="/administrator">
-      <i class="iconfont icon-zuozhe2 icon"></i>
-    </RouterLink>
-  </div>
+    <div class="card admin-btn">
+        <RouterLink to="/administrator">
+            <i class="iconfont icon-zuozhe2 icon"></i>
+        </RouterLink>
+    </div>
 </template>
 
 <script setup>

@@ -1,27 +1,27 @@
 @media (max-width: 660px) {
-  .logo img {
-    display: none;
-  }
-  .active {
-    display: none;
-  }
-  .searchBox {
-    display: none;
-  }
+    .logo img {
+        display: none;
+    }
+    .active {
+        display: none;
+    }
+    .searchBox {
+        display: none;
+    }
 
-  .navMenuBtn {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
-    color: var(--nav-font-color);
-  }
+    .navMenuBtn {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        color: var(--nav-font-color);
+    }
 
-  .navMenuBtn i {
-    font-size: 25px;
-  }
-  .siderBar {
-    display: block;
-  }
+    .navMenuBtn i {
+        font-size: 25px;
+    }
+    .siderBar {
+        display: block;
+    }
 }

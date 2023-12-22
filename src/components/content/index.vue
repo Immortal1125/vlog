@@ -1,12 +1,12 @@
 <template>
-  <div class="content">
-    <div class="aside">
-      <Aside></Aside>
+    <div class="content">
+        <div class="aside">
+            <Aside></Aside>
+        </div>
+        <div class="main">
+            <Main></Main>
+        </div>
     </div>
-    <div class="main">
-      <Main></Main>
-    </div>
-  </div>
 </template>
 
 <script setup>

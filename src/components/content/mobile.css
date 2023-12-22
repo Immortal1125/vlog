@@ -1,9 +1,9 @@
 @media (max-width: 660px) {
-  .aside {
-    display: none;
-  }
-  .main {
-    float: none;
-    width: 100%;
-  }
+    .aside {
+        display: none;
+    }
+    .main {
+        float: none;
+        width: 100%;
+    }
 }
