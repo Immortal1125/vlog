@@ -5,7 +5,7 @@ import Link from "../views/Link/index.vue";
 import Category from "../views/Category/index.vue";
 import Archive from "../views/Archive/index.vue";
 import Vlog from "../views/VlogContent/index.vue";
-import Administrator from "../views/administrator/index.vue";
+import Admin from "../views/administrator/index.vue";
 import Login from "../views/login/index.vue";
 
 const router = createRouter({
@@ -44,9 +44,9 @@ const router = createRouter({
             ],
         },
         {
-            path: "/administrator",
-            name: "administrator",
-            component: Administrator,
+            path: "/admin",
+            name: "admin",
+            component: Admin,
         },
         {
             path: "/login",
@@ -57,7 +57,7 @@ const router = createRouter({
 });
 
 router.beforeEach(async (to, from, next) => {
-    if (to.path === "/administrator") {
+    if (to.path === "/admin") {
         let token = localStorage.getItem("token");
         if (token === null || token === "") {
             next("/login");

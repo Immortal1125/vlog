@@ -33,7 +33,7 @@ function login() {
     localStorage.setItem("token", token);
 
     // 跳转到后台管理页面
-    router.push("/administrator");
+    router.push("/admin");
 }
 </script>
 
@@ -42,3 +42,5 @@ function login() {
 @import "/fonts/iconfont.css";
 @import "./index.css";
 </style>
+
+

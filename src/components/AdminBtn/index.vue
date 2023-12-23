@@ -1,6 +1,6 @@
 <template>
     <div class="card admin-btn">
-        <RouterLink to="/administrator">
+        <RouterLink to="/admin">
             <i class="iconfont icon-zuozhe2 icon"></i>
         </RouterLink>
     </div>
