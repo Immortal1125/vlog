@@ -17,7 +17,7 @@ const router = createRouter({
             component: Index,
             children: [
                 {
-                    path: "/home",
+                    path: "/",
                     name: "home",
                     component: Home,
                 },
