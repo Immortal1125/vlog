@@ -67,10 +67,10 @@
 </template>
 
 <script setup>
-import AdminBtn from "../../../AdminBtn/index.vue";
+import AdminBtn from "@/components/AdminBtn/index.vue";
 import { RouterLink, useRoute } from "vue-router";
 import { inject, ref } from "vue";
-import MusicCard from "../../../Music/index.vue";
+import MusicCard from "@/components/Music/index.vue";
 const props = defineProps(["navBtnList"]);
 
 const barIsOpened = inject("barIsOpened");

@@ -5,9 +5,9 @@
 </template>
 
 <script setup>
-import Nav from "../../components/Nav/index.vue";
-import Content from "../../components/content/index.vue";
-import AdminBtn from "../../components/AdminBtn/index.vue";
+import Nav from "@/components/Nav/index.vue";
+import Content from "@/components/content/index.vue";
+import AdminBtn from "@/components/AdminBtn/index.vue";
 </script>
 
 <style scoped>

@@ -24,7 +24,7 @@
 </template>
 
 <script setup>
-import router from "../../router/index.js";
+import router from "@/router/index.js";
 import { RouterLink } from "vue-router";
 function login() {
     // 在这里执行登录逻辑，例如发送登录请求到后端
