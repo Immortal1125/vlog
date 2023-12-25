@@ -62,12 +62,12 @@
             </label>
             <span>夜间</span>
         </div>
-        <AdminBtn class="adminBtn"></AdminBtn>
+        
     </div>
 </template>
 
 <script setup>
-import AdminBtn from "@/components/AdminBtn/index.vue";
+
 import { RouterLink, useRoute } from "vue-router";
 import { inject, ref } from "vue";
 import MusicCard from "@/components/Music/index.vue";
