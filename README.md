@@ -3,4 +3,4 @@
 emmm
 
 项目目录下运行
-pnpm install 或者 yarn
+`pnpm install` 或者 `yarn`
