@@ -1,12 +1,12 @@
 <!-- Administrator.vue -->
 <template>
-    <h1>登录了</h1>
-    <button @click="exitLogin">退出登录</button>
+    <RouterView> </RouterView>
 </template>
 
 <script setup>
 import { ref, onBeforeMount } from "vue";
 import { useRouter } from "vue-router";
+import { RouterView } from "vue-router";
 
 const isLoggedIn = ref(false);
 const router = useRouter();

@@ -8,6 +8,7 @@
     border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
+    /* scroll-snap-type: y mandatory; */
 }
 
 .vlog-item {
@@ -32,9 +33,14 @@
     backdrop-filter: blur(10px);
     text-align: center;
     line-height: 100px;
+    border-radius: 10px;
 }
 
 .title {
     color: var(--nav-font-color);
     font-size: 2vw;
+}
+
+a:hover .title {
+    color: var(--nav-thin-font-color);
 }

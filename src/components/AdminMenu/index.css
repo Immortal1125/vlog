@@ -1,0 +1,30 @@
+.main {
+    display: flex;
+    position: fixed;
+    top: 75px;
+    left: 20px;
+    bottom: 75px;
+    height: calc(100vh - 150px);
+    width: 300px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.publishVlog {
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    background: orange;
+    font-family: "黑体";
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--nav-font-color);
+}
+
+.publishVlog a {
+    display: block;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--nav-font-color);
+}
